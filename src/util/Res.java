@@ -5,13 +5,7 @@ import java.io.File;
 import java.net.URL;
 
 public class Res {
-    private final String path;
-
-    public Res(String path) {
-        this.path = path;
-    }
-
-    public ImageIcon getImage() {
+    public ImageIcon getImage(String path) {
         URL url;
         try {
             File file = new File("./res/" + path);

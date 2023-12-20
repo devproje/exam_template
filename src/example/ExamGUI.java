@@ -23,7 +23,7 @@ public class ExamGUI extends JFrame {
             graphics.drawString("테스트 메시지입니다.", getWidth() / 2, getHeight() / 2);
         });
 
-        page.addUnit("name", new Hero(new Res("arch.jpg").getImage(), new Point(0, 0)));
+        page.addUnit("name", new Hero(new Res().getImage("arch.jpg"), new Point(0, 0)));
         page.getUnit("name").addAction("right", main_page -> {
             Unit hero = main_page.getUnit("name");
             hero.setPoint(hero.getX() + 10, hero.getY());
