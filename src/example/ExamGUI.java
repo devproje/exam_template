@@ -2,6 +2,7 @@ package example;
 
 import api.AnimatedPage;
 import api.Unit;
+import util.Res;
 
 import javax.swing.*;
 import java.awt.*;
@@ -9,8 +10,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class ExamGUI extends JFrame {
-
-
 
     public ExamGUI() {
         this.setTitle("테스트 페이지");
@@ -24,7 +23,7 @@ public class ExamGUI extends JFrame {
             graphics.drawString("테스트 메시지입니다.", getWidth() / 2, getHeight() / 2);
         });
 
-        page.addUnit("name", new Hero(new ImageIcon("src/example/images/arch.jpg"), new Point(0, 0)));
+        page.addUnit("name", new Hero(new Res("arch.jpg").getImage(), new Point(0, 0)));
         page.getUnit("name").addAction("right", main_page -> {
             Unit hero = main_page.getUnit("name");
             hero.setPoint(hero.getX() + 10, hero.getY());

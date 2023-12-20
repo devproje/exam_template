@@ -1,5 +1,7 @@
 package api;
 
+import api.Unit;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;

@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.function.Consumer;
 
 public abstract class Unit {
-
     ImageIcon icon;
     Point point;
     HashMap<String, Consumer<AnimatedPage>> actionMap = new HashMap<>();
@@ -60,6 +59,4 @@ public abstract class Unit {
         action.accept(animatedPage);
         animatedPage.repaint();
     }
-
-
 }
